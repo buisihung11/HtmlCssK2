@@ -219,17 +219,29 @@ console.log(isStrongPass('hung12345'))
 let afterReverseStr = reverseStrFunc('hung');
 console.log(afterReverseStr);
 
-function addV1(a, b) {
-  return a + b;
-}
+// function addV1(a, b) {
+//   return a + b;
+// }
 
-let addV2 = function (a, b) {
-  return a + b;
-}
+// let addV2 = function (a, b) {
+//   return a + b;
+// }
 
-let addV3 = (a, b) => a + b; // cach moi
+// let addV3 = (a, b) => a + b; // cach moi
 
 let test123 = addV2(1, 2);
 console.log(test123);
+
+// Ex1: 
+// 1,2,3,4,5,6,7,8 => 'King'
+
+// 9 ,10 // 'Queen'
+
+// 11,12,13 // 'Knight'
+
+// else 'Citizen'
+
+
+
 
 

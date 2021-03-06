@@ -85,3 +85,48 @@ If all letters are present in the range, return undefined.
 ```
 fearNotLetter("abce") should return "d".
 ```
+
+# Excersice 06/03/2021
+
+## Tao mot object gio hang o do co cac thuoc tinh nhu
+- Ten nguoi mua hang
+- Dia chi giao
+- Cac mon hang trong gio
+- Tong gia tien
+
+### Cac phuong thuc
+-   Them mon hang vao gio hang (prodName, quantity, price)
+-   Xoa mon hang (prodName)
+-   In ra thong tin bill =>
+   ProdName ---- ProdPrice x Quantity
+   Total ------ Total Amount
+
+```javascript
+
+let cart = {
+   items: [
+      {
+      name: 'Coca',
+      quantity: 1,
+      unitPrice: 10000,
+      },
+      {
+         name: 'Snack',
+         quantity: 2,
+         unitPrice: 5000,
+      }
+   ],
+
+   // METHOD
+   addToCart: function (prodName,quantity,price) {
+      // xu ly de them vao trong thuoc tinh items
+      this.items.push(...)
+   }
+
+}
+
+```
+Ex: lay gia ten san pham dau tien
+```js
+cart.items[0].name
+```
