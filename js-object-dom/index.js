@@ -17,15 +17,18 @@ console.log('index', index);
 //--------
 
 
+// KEY : VALUE
+
+
 let ronaldo = {
     // attributes thuoc tinh
     chisotancong: 11,
     chisophongthu: 7,
+    cacdoibongdathamgia: ['MU', 'Real Mad', 'Juventus', ' Portugal'],
     // method
     sut: function (params) {
         console.log('Sut bang chan phai');
     },
-    cacdoibongdathamgia: ['MU', 'Real Mad', 'Juventus',' Portugal'],
     thongkechiso: function () {
         console.log('Chi so tan cong la: ', this.chisotancong);
     }
@@ -65,7 +68,7 @@ ronaldo.sut();
 let user = {
     name: 'Kenneth',
     age: 28,
-    data: {
+    data: { // nested object
         username: 'kennethCodesAllDay',
         joinDate: 'March 26, 2016',
         organization: 'freeCodeCamp',
@@ -84,4 +87,52 @@ let user = {
 
 
 
-console.log(user.data.location['city'])
+console.log(user.data.location['city']);
+
+// --------- CART EXAM -------- //
+
+
+let cart = {
+    items: [
+        {
+            name: 'Coca',
+            quantity: 1,
+            unitPrice: 10000,
+        },
+        {
+            name: 'Snack',
+            quantity: 2,
+            unitPrice: 5000,
+        },
+    ],
+    customer: {
+        age: 18,
+        address: 'Le Van Viet',
+    },
+    // METHOD
+    addToCart: function (prodName, quantity, price) {
+        // xu ly de them vao trong thuoc tinh items
+        this.items.push(...)
+    },
+    deletFromCart: function (nameItem) // xoa hang
+    {
+        // let lengthArray = this.items.length;
+        // for (let i = 0; i < lengthArray; i++) {
+
+        //     if (nameItem === this.items[i].nameItem) {
+        //         this.items.splice(i, 1);
+        //         break;
+        //     }
+        // }
+
+        // map, filter, reduce
+
+        this.items = this.items.filter(function (item) {
+            return item.name != nameItem;
+        });
+
+    },
+}
+
+
+

@@ -55,6 +55,7 @@ par and strokes will always be numeric and positive. We have added an array of a
 # Excersize 02/03/2021
 
 ## 1. Ex1: 
+
 Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
 
 For example, getIndexToIns([1,2,3,4], 1.5) should return 1 because it is greater than 1 (index 0), but less than 2 (index 1).
@@ -106,23 +107,38 @@ fearNotLetter("abce") should return "d".
 let cart = {
    items: [
       {
-      name: 'Coca',
-      quantity: 1,
-      unitPrice: 10000,
+         name: 'Coca',
+         quantity: 1,
+         unitPrice: 10000,
       },
       {
          name: 'Snack',
          quantity: 2,
          unitPrice: 5000,
-      }
+      },
    ],
-
+   customer: {
+      age: 18,
+      address: 'Le Van Viet',
+   }
    // METHOD
    addToCart: function (prodName,quantity,price) {
       // xu ly de them vao trong thuoc tinh items
       this.items.push(...)
    }
-
+deletFromCart: function(nameItem) // xoa hang
+    {
+        let lengthArray = this.items.length;
+        for (let i = 0; i < lengthArray; i++)
+        {
+            
+            if (nameItem === this.items[i].nameItem)
+            {
+                this.items.splice(i,1);
+                break;
+            }
+        }
+    },
 }
 
 ```
@@ -130,3 +146,19 @@ Ex: lay gia ten san pham dau tien
 ```js
 cart.items[0].name
 ```
+
+// DOM la gi
+// Vai thao tac co ban trong DOM title, hostName,
+// document.all
+// getElelemtBy... (id, className)
+
+
+// HOMEWORK
+// Attribute trong mot the la gi
+// Dung mot giao dien Gio hang
+
+// Tu nhung attribute cua object gio hang
+
+// Phan biet innerText ,innerHTML, textContent
+
+// THEM the vao element, xoa the, thay doi noi dung ben trong
