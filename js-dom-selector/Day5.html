@@ -10,7 +10,13 @@
 
     <div class="container-fluid" style="margin: 0 auto">
       <h3 class="text-primary text-center">jQuery Playground</h3>
-      <div class="row">
+
+      <p>Number: <span id="quantity"></span></p>
+
+      <button id="minusOne">Tru 1</button>
+      <button id="plusOne">Cong 1</button>
+
+      <div id="well-container" class="row">
         <!-- LEFT -->
         <div class="col-xs-6">
           <h4>#left-well</h4>
@@ -25,9 +31,7 @@
               #target3
             </button>
           </div>
-          <button id="addLeftButton" onclick="addLeftButton()">
-            Them 1 button
-          </button>
+          <button id="addLeftButton">Them 1 button</button>
         </div>
         <!-- RIGHT -->
         <div class="col-xs-6">
@@ -43,14 +47,14 @@
               #target6
             </button>
           </div>
-          <button id="addRightButton" onclick="addRightButton()">
-            Them 1 button
-          </button>
+          <button id="addRightButton">Them 1 button</button>
         </div>
       </div>
     </div>
 
-    <script>
+    <script src="./jscrud.js"></script>
+
+    <!-- <script>
       var cot_trai = document.getElementById("left-well");
       var cot_phai = document.getElementById("right-well");
       var leftCount = 1;
@@ -110,6 +114,6 @@
         const rightBtn = rightbuttons[i];
         rightBtn.style.backgroundColor = "blue";
       }
-    </script>
+    </script> -->
   </body>
 </html>
