@@ -71,9 +71,9 @@ addLeftBtn.onclick = function () {
   // tao the button moi de them vao trong
   // cot left well
 
-  //   let btn = `<button>Nut moi them</button>`;
+  // let btn = `<button style="color: pink;">Nut moi them</button>`;
   //   console.log("Da click");
-  //   leftWellDiv.innerHTML = leftWellDiv.innerHTML + btn;
+  // leftWellDiv.innerHTML = leftWellDiv.innerHTML + btn;
 
   let btn = document.createElement("button");
   btn.className = "btn btn-default target";
