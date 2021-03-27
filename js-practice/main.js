@@ -1,6 +1,6 @@
-// 1. Add product to cart
-// 2. Update quantity
-// 3. Update cart summary total
+// 1. buildProductList
+// 2. Add product to cart
+// 3. buildCart
 
 const products = [
   {
@@ -63,8 +63,11 @@ const updateCart = function () {
   // save to local Storage
 };
 
+// button.plus
 const increaseProductQuantity = function (prodId) {};
+// button.minus
 const subtractProductQuantity = function (prodId) {};
+
 const removeProduct = function (prodId) {};
 
 const updateTotalAmount = function () {};
@@ -72,7 +75,17 @@ const updateTotalAmount = function () {};
 // method for render
 
 const buildCart = function () {};
-const buildProductList = function () {};
+const buildProductList = function () {
+  for (let index = 0; index < products.length; index++) {
+    const product = products[index];
+
+    // them the product vao trong the productListContainer
+  }
+  // Loop products
+  // Them vao trong the productListContainer
+  // .innerHTML += '<p></p>'
+  // Tao 1 the bang createElement , addChild...
+};
 
 const productsTemplate = (product) => {
   return `
@@ -125,6 +138,52 @@ const productsTemplate = (product) => {
           </div>
         </div>
       </div>
+    </div>
+    <hr class="mb-4">
+  `;
+};
+
+const cartItemTemplate = (product) => {
+  return `
+    <div id="${product.id}-dropdown" class="product row">
+      <div class="col-4 px-2">
+        <div class="view zoom overlay z-depth-1 rounded mb-md-0">
+          <img class="img-fluid w-100" src="${product.image}" alt="Sample">
+        </div>
+      </div>
+      <div class="col-5 px-2">
+        <span>${product.name}</span>
+        <p class="mb-0"><span><strong class="price">$${(
+          product.price * product.itemsNumber
+        ).toFixed(2)}</strong></span></p>
+      </div>
+      <div class="col-2 pl-0 pr-2">
+        <a href="#!" type="button" class="remove-product"><i class="fas fa-trash-alt"></i></a>
+      </div>
+    </div>
+    </div>
+    <hr class="mb-4">
+  `;
+};
+
+const cartItemTemplate = (product) => {
+  return `
+    <div id="${product.id}-dropdown" class="product row">
+      <div class="col-4 px-2">
+        <div class="view zoom overlay z-depth-1 rounded mb-md-0">
+          <img class="img-fluid w-100" src="${product.image}" alt="Sample">
+        </div>
+      </div>
+      <div class="col-5 px-2">
+        <span>${product.name}</span>
+        <p class="mb-0"><span><strong class="price">$${(
+          product.price * product.itemsNumber
+        ).toFixed(2)}</strong></span></p>
+      </div>
+      <div class="col-2 pl-0 pr-2">
+        <a href="#!" type="button" class="remove-product"><i class="fas fa-trash-alt"></i></a>
+      </div>
+    </div>
     </div>
     <hr class="mb-4">
   `;
